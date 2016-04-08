@@ -20,7 +20,7 @@ rolar.addEventListener('click', function(e) {
 	for (var dado = 0; dado < dices.length; dado++)
 		for (var i = 0; i < dices[dado].value; i++)
 		{	
-			randomico = Math.ceil(Math.random() * (quantidadeD[dado]+1));
+			randomico = Math.ceil(Math.random() * quantidadeD[dado]);
 			soma += randomico;
 			
 			if(resultado.innerHTML == "")
