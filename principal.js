@@ -14,6 +14,7 @@ var soma;
 
 rolar.addEventListener('click', function(e) {
 	recipiente.classList.remove('oculto');
+	resultado.innerHTML = "";
 	soma = 0;
 	
 	for (var dado = 0; dado < dices.length; dado++)
@@ -22,13 +23,13 @@ rolar.addEventListener('click', function(e) {
 			randomico = Math.ceil(Math.random() * (quantidadeD[dado]+1));
 			soma += randomico;
 			
-			if(resultado == undefined)
+			if(resultado.innerHTML == "")
 				resultado.innerHTML = randomico;
 			else
-				resultado.innerHTML = resultado + ' + ' + randomico;
+				resultado.innerHTML = resultado.innerHTML + ' + ' + randomico;
 		}
 		
-	resultado.innerHTML = resultado + ' = ' + soma;
+	resultado.innerHTML = resultado.innerHTML + ' = ' + soma;
 });
 
 // Faça seu exercício neste arquivo
