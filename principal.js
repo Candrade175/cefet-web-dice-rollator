@@ -5,7 +5,7 @@ var dices = [document.getElementById('quantidadeD4'),
 			 document.getElementById('quantidadeD12'),
 			 document.getElementById('quantidadeD20')];
 
-var quantidadeD = [4, 6, 7, 10, 12, 20];
+var quantidadeD = [4, 6, 8, 10, 12, 20];
 var randomico;
 var recipiente = document.getElementById('recipienteResultados');
 var resultado = document.getElementById('resultado');
