@@ -1,25 +1,34 @@
-var rolar = document.getElementById('rolar');
 var dices = [document.getElementById('quantidadeD4'),
 			 document.getElementById('quantidadeD6'),
 			 document.getElementById('quantidadeD8'),
 			 document.getElementById('quantidadeD10'),
 			 document.getElementById('quantidadeD12'),
 			 document.getElementById('quantidadeD20')];
+
+var quantidadeD = [4, 6, 7, 10, 12, 20];
 var randomico;
-var resultado;
-var soma = 0;
-var valores = [4, 6, 7, 10, 12, 20];
+var recipiente = document.getElementById('recipienteResultados');
+var resultado = document.getElementById('resultado');
+var rolar = document.getElementById('rolar');
+var soma;
 
 rolar.addEventListener('click', function(e) {
+	recipiente.classList.remove('oculto');
+	soma = 0;
+	
 	for (var dado = 0; dado < dices.length; dado++)
-	{
 		for (var i = 0; i < dices[dado].value; i++)
 		{	
-			randomico = Math.ceil(Math.random() * (valores[dado]+1));
+			randomico = Math.ceil(Math.random() * (quantidadeD[dado]+1));
 			soma += randomico;
-			console.log(randomico);
+			
+			if(resultado == undefined)
+				resultado.innerHTML = randomico;
+			else
+				resultado.innerHTML = resultado + ' + ' + randomico;
 		}
-	}
+		
+	resultado.innerHTML = resultado + ' = ' + soma;
 });
 
 // Faça seu exercício neste arquivo
