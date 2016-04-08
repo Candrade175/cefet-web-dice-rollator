@@ -1,7 +1,13 @@
 var botao = document.getElementById('rolar');
+var dices = [document.getElementById('quantidadeD4'),
+			 document.getElementById('quantidadeD6'),
+			 document.getElementById('quantidadeD8'),
+			 document.getElementById('quantidadeD10'),
+			 document.getElementById('quantidadeD12'),
+			 document.getElementById('quantidadeD20')];
 
 botao.addEventListener('click', function(e) {
-	console.log("Cheguei");
+	console.log(dices.length);
 });
 
 // Faça seu exercício neste arquivo
