@@ -1,13 +1,24 @@
-var botao = document.getElementById('rolar');
+var rolar = document.getElementById('rolar');
 var dices = [document.getElementById('quantidadeD4'),
 			 document.getElementById('quantidadeD6'),
 			 document.getElementById('quantidadeD8'),
 			 document.getElementById('quantidadeD10'),
 			 document.getElementById('quantidadeD12'),
 			 document.getElementById('quantidadeD20')];
+var randomico;
+var resultado;
+var soma = 0;
 
-botao.addEventListener('click', function(e) {
-	console.log(dices.length);
+rolar.addEventListener('click', function(e) {
+	for (var dado = 0; dado < dices.length; dado++)
+	{
+		for (var i = 0; i < dices[dado].value; i++)
+		{	
+			randomico = Math.ceil(Math.random() * dices[dado].max);
+			soma += randomico;
+			console.log(randomico);
+		}
+	}
 });
 
 // Faça seu exercício neste arquivo
