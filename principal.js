@@ -1,3 +1,9 @@
+var botao = document.getElementById('rolar');
+
+botao.addEventListener('click', function(e) {
+	console.log("Cheguei");
+});
+
 // Faça seu exercício neste arquivo
 
 
